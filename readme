@@ -56,5 +56,4 @@ npm start
 ```
 
 
-M
-> Make sure to replace placeholders like `your_mongodb_connection_string`, and `your_jwt_secret_key` with actual values.
+
