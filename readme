@@ -1,0 +1,82 @@
+##### Expense Tracker - MERN Stack Application #####
+
+This repository contains a full-stack Expense Tracker application built with the MERN stack (MongoDB, Express, React, Node.js).
+## Project Structure ##
+expense-tracker/
+├── backend/        
+├── frontend/
+
+## Prerequisites ##
+
+Node.js 
+npm 
+MongoDB (local installation or MongoDB Atlas account)
+
+## Getting Started ##
+Follow these steps to set up and run the application locally:
+1. Clone the repository
+bashgit clone <repository-url>
+cd expense-tracker
+2. Set up the Backend
+## Install dependencies ##
+bashcd backend
+npm install
+## Configure Environment Variables ##
+Create a .env file in the backend directory:
+bash# In the backend directory
+touch .env
+Open the .env file and add the following configuration:
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/expense-tracker
+# Add any other environment variables your application needs:
+# JWT_SECRET=your_jwt_secret
+# NODE_ENV=development
+Note: Replace the MONGO_URI with your MongoDB connection string. If you're using MongoDB Atlas, it will look like:
+MONGO_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/expense-tracker?retryWrites=true&w=majority
+3. Set up the Frontend
+Install dependencies
+bashcd ../frontend
+npm install
+4. Running the Application
+## Start the Backend Server ##
+bashcd backend
+npm start
+This will start the backend server using nodemon, which will automatically restart when changes are detected.
+### Start the Frontend Development Server ###
+Open a new terminal window:
+bashcd frontend
+npm start
+This will start the React development server and open the application in your default browser.
+Troubleshooting
+Port Already in Use
+If you encounter an error like EADDRINUSE: address already in use :::5000, it means port 5000 is already being used by another process. You can either:
+
+Kill the process using port 5000:
+bashsudo lsof -i :5000
+kill -9 <PID>
+
+Change the port in the .env file:
+PORT=5001
+
+
+MongoDB Connection Issues
+If you're having trouble connecting to MongoDB:
+
+Check if your MongoDB service is running.
+Verify your connection string in the .env file.
+If using MongoDB Atlas, ensure your IP address has been whitelisted.
+
+API Endpoints
+The backend provides the following API endpoints:
+
+GET /api/expenses: Get all expenses
+POST /api/expenses: Add a new expense
+PUT /api/expenses/:id: Update an expense
+DELETE /api/expenses/:id: Delete an expense
+
+Technologies Used
+
+Frontend: React, React Router, Axios
+Backend: Node.js, Express.js
+Database: MongoDB
+Additional Tools: Mongoose, dotenv, nodemon
