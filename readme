@@ -10,7 +10,6 @@ mern-expense-tracker/
 ├── frontend/       # React application
 ├── .gitignore
 ├── README.md
-└── package.json
 ```
 
 
