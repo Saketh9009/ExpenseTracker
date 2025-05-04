@@ -8,7 +8,6 @@
 mern-expense-tracker/
 ├── backend/        # Node.js + Express server
 ├── frontend/       # React application
-├── .gitignore
 ├── README.md
 ```
 
